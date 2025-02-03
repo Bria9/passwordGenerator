@@ -1,7 +1,7 @@
 "use strict"
 
 const password1 = document.getElementById("password1")
-// const password2 = document.getElementById("password2")
+const password2 = document.getElementById("password2")
 const submitBtn =  document.getElementById("submit-btn")
 let btnClicked = false;
 
@@ -26,4 +26,17 @@ function password1Gen(){
    }
 
 
+function password2Gen(){
+    let password = " "
+    for (let i = 0; i < 15; i++) {
+        let index = Math.floor(Math.random()* characters.length);
+        password += characters[index]
+    }
+     password2.textContent = password
+     console.log(password);
+     
+   }
+
+
  submitBtn.addEventListener("click", password1Gen);
+ submitBtn.addEventListener("click", password2Gen);
